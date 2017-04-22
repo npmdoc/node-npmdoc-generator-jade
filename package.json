@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-generator-jade",     "homepage": "https://github.com/npmdoc/node-npmdoc-generator-jade",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-generator-jade.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [generator-jade (v0.9.2)](https://github.com/yfr/generator-jade)  [![npm package](https://img.shields.io/npm/v/npmdoc-generator-jade.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-jade) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-jade.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-jade)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-generator-jade",
+    "keywords": [
+        "documentation",
+        "generator-jade"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_generator_jade.js",
+    "name": "npmdoc-generator-jade",
+    "nameAlias": "npmdoc_generator_jade",
+    "nameOriginal": "npmdoc-generator-jade",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-generator-jade.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
